@@ -1,0 +1,14 @@
+{
+  "name": "neziora-siwit",
+  "version": "0.1.0",
+  "description": "SiWIT — Sinhala Web Interoperability Test Kit",
+  "author": "Uditha Manohara Prasad",
+  "publisher": "Neziora",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/unit/run-tests.js",
+    "serve": "npx serve ."
+  }
+}
+

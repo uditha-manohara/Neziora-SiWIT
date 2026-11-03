@@ -1,0 +1,105 @@
+/* ==========================================================================
+   SiWIT — Responsive Styles (css/responsive.css)
+   ========================================================================== */
+
+/* Tablet & Smaller Desktops */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 240px;
+  }
+
+  .module-content {
+    padding: 24px;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile & Small Tablets */
+@media (max-width: 768px) {
+  #app-container {
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .sidebar-header {
+    padding: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar-nav {
+    display: none; /* Collapsible or scrollable horizontally */
+    padding: 12px;
+  }
+
+  .sidebar-nav.mobile-expanded {
+    display: block;
+  }
+
+  .app-main {
+    margin-left: 0;
+  }
+
+  .app-topbar {
+    padding: 0 16px;
+  }
+
+  .module-content {
+    padding: 16px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-footer {
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .char-pill {
+    min-width: 80px;
+    padding: 8px 10px;
+  }
+
+  .char-pill .glyph {
+    font-size: 1.4rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .app-sidebar, .app-topbar, .btn, .card-footer, .filter-pills {
+    display: none !important;
+  }
+
+  .app-main {
+    margin-left: 0 !important;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .card {
+    border: 1px solid #CCC !important;
+  }
+}
+
